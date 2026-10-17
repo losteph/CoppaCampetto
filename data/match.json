@@ -1,0 +1,35 @@
+[
+  {
+    "id": "match_01",
+    "title": "Vipers vs Red Bullz",
+    "date": "16/10/2026 18:00",
+    "tournamentId": "girone_a",
+    "homeName": "Vipers",
+    "awayName": "Red Bullz",
+    "homeColorValue": 4282090230,
+    "awayColorValue": 4293870660,
+    "homeScore": 78,
+    "awayScore": 72,
+    "homeRoster": [
+      { "dbId": "1", "num": "3", "name": "Marco V.", "role": "PG", "inField": true, "fouls": 2, "playedSeconds": 1200 },
+      { "dbId": "2", "num": "7", "name": "Andrea R.", "role": "SG", "inField": true, "fouls": 1, "playedSeconds": 1200 },
+      { "dbId": "3", "num": "11", "name": "Luca B.", "role": "SF", "inField": true, "fouls": 3, "playedSeconds": 1200 },
+      { "dbId": "4", "num": "21", "name": "Matteo G.", "role": "PF", "inField": true, "fouls": 1, "playedSeconds": 1200 },
+      { "dbId": "5", "num": "33", "name": "Davide F.", "role": "C", "inField": true, "fouls": 4, "playedSeconds": 1200 }
+    ],
+    "awayRoster": [
+      { "dbId": "6", "num": "0", "name": "Simone M.", "role": "PG", "inField": true, "fouls": 2, "playedSeconds": 1200 },
+      { "dbId": "7", "num": "8", "name": "Francesco T.", "role": "SG", "inField": true, "fouls": 2, "playedSeconds": 1200 },
+      { "dbId": "8", "num": "23", "name": "Lorenzo P.", "role": "SF", "inField": true, "fouls": 3, "playedSeconds": 1200 },
+      { "dbId": "9", "num": "34", "name": "Gabriele C.", "role": "PF", "inField": true, "fouls": 4, "playedSeconds": 1200 },
+      { "dbId": "10", "num": "55", "name": "Federico L.", "role": "C", "inField": true, "fouls": 2, "playedSeconds": 1200 }
+    ],
+    "events": [
+      { "id": 1, "title": "🎯 TRIPLA (+3) #3 Marco V.", "sub": "Squadra: Vipers • 🅰 Assist: #7 Andrea R.", "minute": "1°Q 08:45", "team": "home", "pts": 3, "type": "SCORE_3PT", "playerId": "1" },
+      { "id": 2, "title": "🏀 CANESTRO (+2) #8 Francesco T.", "sub": "Squadra: Red Bullz", "minute": "1°Q 07:12", "team": "away", "pts": 2, "type": "SCORE_2PT", "playerId": "7" },
+      { "id": 3, "title": "⭐ Buona Azione: #11 Luca B.", "sub": "Squadra: Vipers", "minute": "1°Q 05:20", "team": "home", "pts": 0, "type": "GOOD_PLAY", "playerId": "3" },
+      { "id": 4, "title": "⚠️ Fallo #33 Davide F. (1/5)", "sub": "Squadra: Vipers", "minute": "2°Q 09:10", "team": "home", "pts": 0, "type": "FOUL", "playerId": "5" },
+      { "id": 5, "title": "☄️ LIBERO (+1) #34 Gabriele C.", "sub": "Squadra: Red Bullz", "minute": "2°Q 09:09", "team": "away", "pts": 1, "type": "SCORE_1PT", "playerId": "9" }
+    ]
+  }
+]

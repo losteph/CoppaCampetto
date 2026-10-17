@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basket Steph - Portale Torneo Ufficiale</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- BARRA SUPERIORE -->
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <div class="brand">
+        <span class="trophy-icon">🏀</span>
+        <div>
+          <h1 id="tournament-title">COPPA CAMPETTO</h1>
+          <p id="tournament-subtitle">Portale Ufficiale Risultati, Classifiche & Statistiche</p>
+        </div>
+      </div>
+
+      <!-- SELETTORE MODALITÀ TORNEO (ZERO LAG) -->
+      <div class="tournament-switch-wrapper">
+        <div class="switch-pill-container" id="tournament-switcher">
+          <!-- Popolato dinamicamente da app.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- SOTTO-SCHEDE DI NAVIGAZIONE -->
+    <nav class="sub-tabs" id="sub-tabs-nav">
+      <!-- Gestite via JS a seconda se è Girone o Playoff -->
+    </nav>
+  </header>
+
+  <!-- CONTENUTO PRINCIPALE -->
+  <main class="main-container">
+    <div id="loading-state" class="status-box">
+      <div class="spinner"></div>
+      <p>Caricamento dati torneo in corso...</p>
+    </div>
+
+    <!-- 1. SEZIONE CLASSIFICA (PER GIRONI) -->
+    <section id="tab-classifica" class="tab-section" style="display: none;">
+      <h2 class="section-title">CLASSIFICA BASKET</h2>
+      <div class="table-card">
+        <div class="table-scroll">
+          <table class="league-table">
+            <thead>
+              <tr>
+                <th class="col-pos">POS</th>
+                <th class="col-team">SQUADRA</th>
+                <th class="col-pt">PT</th>
+                <th>G</th>
+                <th>V</th>
+                <th>P</th>
+                <th>PF</th>
+                <th>PS</th>
+                <th>DC</th>
+              </tr>
+            </thead>
+            <tbody id="league-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="legend-card">
+        <h3>Legenda Basket:</h3>
+        <p class="legend-subtitle">Punteggi:</p>
+        <ul class="legend-list">
+          <li>• <strong>V</strong> (Vittoria): +2 pt | <strong>P</strong> (Sconfitta): 0 pt</li>
+        </ul>
+        <p class="legend-subtitle" style="margin-top: 8px;">Criteri Parità (Ex-Aequo):</p>
+        <ol class="legend-list">
+          <li>1. Esito Scontro Diretto</li>
+          <li>2. Miglior Differenza Canestri (DC: PF - PS)</li>
+          <li>3. Maggior numero di Punti Segnati (PF)</li>
+        </ol>
+      </div>
+      <div class="legend-card" style="margin-top: 14px;">
+        <h3 style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Note Legali & Disclaimer</h3>
+        <p style="font-size: 11px; line-height: 1.6; color: var(--text-muted); margin-top: 6px;">
+          Coppa Campetto è una piattaforma web indipendente e gratuita per la registrazione di statistiche, risultati e contenuti multimediali amatoriali tra appassionati di streetball. Non costituisce associazione sportiva, ente organizzatore o promotore di eventi aperti al pubblico. Le partite registrate sono giocate in piena autonomia decisionale, autogestione e responsabilità individuale dai singoli partecipanti nei luoghi di libero accesso. L'amministratore del sito declina qualsiasi responsabilità per l'idoneità fisica dei giocatori, la sicurezza degli impianti e qualsiasi incidente o danno a persone o cose verificatosi durante lo svolgimento delle partite.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. SEZIONE TABELLONE KNOCKOUT (PER PLAYOFF) -->
+    <section id="tab-tabellone" class="tab-section" style="display: none;">
+      <div id="champion-banner-container"></div>
+      <div id="bracket-container"></div>
+    </section>
+
+    <!-- 3. SEZIONE PARTITE / CALENDARIO (GIRONI) -->
+    <section id="tab-partite" class="tab-section" style="display: none;">
+      <div id="matches-container"></div>
+    </section>
+
+    <!-- 4. SEZIONE STATISTICHE LEADERBOARD -->
+    <section id="tab-marcatori" class="tab-section" style="display: none;">
+      <div class="table-card">
+        <table class="league-table scorers-table">
+          <thead>
+            <tr>
+              <th class="col-pos">POS</th>
+              <th class="col-team">GIOCATORE</th>
+              <th class="col-pt">PTS</th>
+              <th style="color:#8B5CF6; font-size:10px; font-weight:900;">RIM</th>
+              <th class="col-ass">ASS</th>
+            </tr>
+          </thead>
+          <tbody id="scorers-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 5. SEZIONE SQUADRE & ROSE -->
+    <section id="tab-squadre" class="tab-section" style="display: none;">
+      <div id="teams-container" class="teams-grid"></div>
+    </section>
+  </main>
+
+  <!-- MODALE DETTAGLIO PARTITA -->
+  <div id="match-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <span id="modal-match-meta" class="modal-meta"></span>
+        <button class="modal-close" onclick="closeMatchModal()">✕</button>
+      </div>
+
+      <div id="modal-score-box" class="modal-score-box"></div>
+      <div id="modal-scheduled-view" style="display: none;"></div>
+
+      <div id="modal-played-view" style="display: none;">
+        <div class="modal-tabs">
+          <button id="btn-tab-cronaca" class="modal-tab-btn active" onclick="switchMatchModalTab('cronaca')">
+            📜 Cronaca
+          </button>
+          <button id="btn-tab-pagelle" class="modal-tab-btn" onclick="switchMatchModalTab('pagelle')">
+            👥 Formazioni & Voti
+          </button>
+        </div>
+        <div id="modal-tab-cronaca" class="modal-tab-body"></div>
+        <div id="modal-tab-pagelle" class="modal-tab-body" style="display: none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALE ATLETA FUT -->
+  <div id="player-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-sheet player-sheet">
+      <div class="modal-header">
+        <span class="modal-meta">SCHEDA ATLETA</span>
+        <button class="modal-close" onclick="closePlayerModal()">✕</button>
+      </div>
+      <div id="player-card-content"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

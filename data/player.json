@@ -1,0 +1,49 @@
+[
+  { "id": "1", "name": "Marco V.", "role": "PG", "stats": { "tir": "A+", "pas": "A", "dri": "A+", "dif": "B", "rim": "B-", "fis": "B" } },
+  { "id": "2", "name": "Andrea R.", "role": "SG", "stats": { "tir": "A", "pas": "B+", "dri": "A", "dif": "A-", "rim": "C+", "fis": "B+" } },
+  { "id": "3", "name": "Luca B.", "role": "SF", "stats": { "tir": "B+", "pas": "B", "dri": "B+", "dif": "A", "rim": "A-", "fis": "A" } },
+  { "id": "4", "name": "Matteo G.", "role": "PF", "stats": { "tir": "B-", "pas": "B-", "dri": "B", "dif": "A+", "rim": "A", "fis": "A+" } },
+  { "id": "5", "name": "Davide F.", "role": "C", "stats": { "tir": "C+", "pas": "C", "dri": "C+", "dif": "A+", "rim": "A+", "fis": "A+" } },
+
+  { "id": "6", "name": "Simone M.", "role": "PG", "stats": { "tir": "A-", "pas": "A+", "dri": "A", "dif": "B-", "rim": "C", "fis": "B-" } },
+  { "id": "7", "name": "Francesco T.", "role": "SG", "stats": { "tir": "A+", "pas": "B", "dri": "A+", "dif": "B", "rim": "C+", "fis": "B" } },
+  { "id": "8", "name": "Lorenzo P.", "role": "SF", "stats": { "tir": "B", "pas": "B+", "dri": "B+", "dif": "A-", "rim": "B+", "fis": "A" } },
+  { "id": "9", "name": "Gabriele C.", "role": "PF", "stats": { "tir": "B", "pas": "C+", "dri": "B-", "dif": "A", "rim": "A+", "fis": "A" } },
+  { "id": "10", "name": "Federico L.", "role": "C", "stats": { "tir": "C", "pas": "C-", "dri": "C", "dif": "A+", "rim": "A+", "fis": "A+" } },
+
+  { "id": "11", "name": "Alessandro S.", "role": "PG", "stats": { "tir": "B+", "pas": "A", "dri": "A", "dif": "B+", "rim": "C+", "fis": "B" } },
+  { "id": "12", "name": "Mattia D.", "role": "SG", "stats": { "tir": "A", "pas": "B-", "dri": "B+", "dif": "A-", "rim": "B-", "fis": "B+" } },
+  { "id": "13", "name": "Riccardo N.", "role": "SF", "stats": { "tir": "A-", "pas": "B+", "dri": "A-", "dif": "B+", "rim": "B", "fis": "B+" } },
+  { "id": "14", "name": "Tommaso E.", "role": "PF", "stats": { "tir": "B+", "pas": "B", "dri": "B", "dif": "A-", "rim": "A-", "fis": "A" } },
+  { "id": "15", "name": "Edoardo O.", "role": "C", "stats": { "tir": "C+", "pas": "C+", "dri": "C-", "dif": "A", "rim": "A+", "fis": "A+" } },
+
+  { "id": "16", "name": "Filippo B.", "role": "PG", "stats": { "tir": "A", "pas": "A-", "dri": "A+", "dif": "B", "rim": "C", "fis": "B-" } },
+  { "id": "17", "name": "Jacopo Z.", "role": "SG", "stats": { "tir": "A+", "pas": "B", "dri": "A-", "dif": "B+", "rim": "C+", "fis": "B" } },
+  { "id": "18", "name": "Christian K.", "role": "SF", "stats": { "tir": "B+", "pas": "B+", "dri": "B", "dif": "A", "rim": "A-", "fis": "A" } },
+  { "id": "19", "name": "Manuel A.", "role": "PF", "stats": { "tir": "B-", "pas": "B-", "dri": "B-", "dif": "A+", "rim": "A+", "fis": "A+" } },
+  { "id": "20", "name": "Samuele Q.", "role": "C", "stats": { "tir": "C", "pas": "C", "dri": "C-", "dif": "A+", "rim": "A+", "fis": "A+" } },
+
+  { "id": "21", "name": "Daniele Y.", "role": "PG", "stats": { "tir": "A-", "pas": "A+", "dri": "A-", "dif": "B+", "rim": "C+", "fis": "B" } },
+  { "id": "22", "name": "Pietro J.", "role": "SG", "stats": { "tir": "A+", "pas": "B+", "dri": "A", "dif": "B", "rim": "C", "fis": "B+" } },
+  { "id": "23", "name": "Diego W.", "role": "SF", "stats": { "tir": "B+", "pas": "B", "dri": "B+", "dif": "A+", "rim": "B+", "fis": "A" } },
+  { "id": "24", "name": "Nicola H.", "role": "PF", "stats": { "tir": "B", "pas": "C+", "dri": "B", "dif": "A", "rim": "A", "fis": "A+" } },
+  { "id": "25", "name": "Stefano I.", "role": "C", "stats": { "tir": "C+", "pas": "C", "dri": "C", "dif": "A+", "rim": "A+", "fis": "A+" } },
+
+  { "id": "26", "name": "Giorgio U.", "role": "PG", "stats": { "tir": "B+", "pas": "A-", "dri": "A", "dif": "B", "rim": "C-", "fis": "B-" } },
+  { "id": "27", "name": "Enrico X.", "role": "SG", "stats": { "tir": "A-", "pas": "B+", "dri": "B+", "dif": "A-", "rim": "C+", "fis": "B" } },
+  { "id": "28", "name": "Valerio M.", "role": "SF", "stats": { "tir": "A-", "pas": "B", "dri": "A-", "dif": "B+", "rim": "B+", "fis": "A-" } },
+  { "id": "29", "name": "Fabio T.", "role": "PF", "stats": { "tir": "B-", "pas": "B-", "dri": "B-", "dif": "A+", "rim": "A", "fis": "A" } },
+  { "id": "30", "name": "Claudio S.", "role": "C", "stats": { "tir": "C", "pas": "C", "dri": "C-", "dif": "A+", "rim": "A+", "fis": "A+" } },
+
+  { "id": "31", "name": "Alberto R.", "role": "PG", "stats": { "tir": "A", "pas": "A", "dri": "A+", "dif": "B-", "rim": "C", "fis": "B" } },
+  { "id": "32", "name": "Roberto G.", "role": "SG", "stats": { "tir": "A+", "pas": "B-", "dri": "A", "dif": "B+", "rim": "B-", "fis": "B+" } },
+  { "id": "33", "name": "Massimo L.", "role": "SF", "stats": { "tir": "B+", "pas": "A-", "dri": "B+", "dif": "A", "rim": "B+", "fis": "A" } },
+  { "id": "34", "name": "Gianluca P.", "role": "PF", "stats": { "tir": "B", "pas": "C+", "dri": "B-", "dif": "A+", "rim": "A+", "fis": "A+" } },
+  { "id": "35", "name": "Angelo B.", "role": "C", "stats": { "tir": "C+", "pas": "C-", "dri": "C", "dif": "A+", "rim": "A+", "fis": "A+" } },
+
+  { "id": "36", "name": "Vincenzo D.", "role": "PG", "stats": { "tir": "B+", "pas": "A+", "dri": "A-", "dif": "B+", "rim": "C+", "fis": "B" } },
+  { "id": "37", "name": "Salvatore N.", "role": "SG", "stats": { "tir": "A", "pas": "B+", "dri": "A-", "dif": "A-", "rim": "B-", "fis": "B" } },
+  { "id": "38", "name": "Paolo F.", "role": "SF", "stats": { "tir": "A-", "pas": "B", "dri": "B+", "dif": "A", "rim": "A-", "fis": "A" } },
+  { "id": "39", "name": "Michele V.", "role": "PF", "stats": { "tir": "B", "pas": "B-", "dri": "B", "dif": "A", "rim": "A+", "fis": "A+" } },
+  { "id": "40", "name": "Antonio C.", "role": "C", "stats": { "tir": "C-", "pas": "C", "dri": "C-", "dif": "A+", "rim": "A+", "fis": "A+" } }
+]
