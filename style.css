@@ -727,3 +727,111 @@ body {
   font-style: italic;
   font-weight: 700;
 }
+
+
+/* ALLINEAMENTO HEADER & TASTO INFO */
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.info-btn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0; /* Impedisce che si schiacci o allarghi */
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.info-btn:hover {
+  background: var(--bg-card);
+  border-color: var(--orange);
+}
+
+/* FORMATTAZIONE CONTENUTO REGOLAMENTO */
+.rules-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rules-card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-elevated);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.rules-card h4 {
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--orange);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rules-card p {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.rules-card p:last-child {
+  margin-bottom: 0;
+}
+
+.rules-card strong {
+  color: var(--text-main);
+}
+
+.rules-card.warning {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.rules-card.warning h4 {
+  color: var(--amber);
+}
+
+.top-bar-inner {
+  position: relative; /* punto di riferimento per l'angolo */
+}
+
+.btn-info-corner {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: #1E293B;
+  border: 1px solid #334155;
+  color: #F97316;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  width: auto !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 60;
+  line-height: 1;
+}
+
+.btn-info-corner:hover {
+  background: #111827;
+  border-color: #F97316;
+}

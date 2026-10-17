@@ -9,9 +9,9 @@ let teamsData = [];
 let playersData = [];
 
 const GRADE_VALUES = {
-  "A+": 95, "A": 90, "A-": 85,
-  "B+": 80, "B": 75, "B-": 70,
-  "C+": 65, "C": 60, "C-": 55
+  "A+": 99, "A": 92, "A-": 87,
+  "B+": 82, "B": 77, "B-": 72,
+  "C+": 67, "C": 62, "C-": 55
 };
 
 const ROLE_WEIGHTS = {
@@ -200,6 +200,8 @@ function findTeamColorHex(teamName, fallbackColorValue) {
 
 function getTeamColorDot(teamName, fallbackColorValue, isTbd = false) {
   if (isTbd) return "🏀";
+  const str = String(teamName || "").toLowerCase();
+  if (!teamName || str.includes("vincente") || str.includes("perdente") || str === "tbd") return "🏀";
   const hex = findTeamColorHex(teamName, fallbackColorValue).toUpperCase();
   if (hex === "#EAB308") return "🟡";
   if (hex === "#EF4444") return "🔴";
@@ -257,14 +259,14 @@ function calculateMatchRatings(m) {
       if (teamWon) score += 0.2;
       else if (teamLost) score -= 0.1;
 
-      score += (pts3 * 0.4);
+      score += (pts3 * 0.5);
       score += (pts2 * 0.3);
       score += (pts1 * 0.1);
       score += (assists * 0.2);
       score += (rebounds * 0.2);
-      score += (goodPlays * 0.3);
+      score += (goodPlays * 0.1);
       score -= (turnovers * 0.2);
-      score -= (fouls * 0.3);
+      score -= (fouls * 0.4);
 
       score = Math.min(9.9, Math.max(1.0, score));
       ratings[playerId] = Number(score.toFixed(1));
@@ -563,7 +565,7 @@ function buildKnockoutCard(info) {
         <div class="match-team-away ${isAwayTbd ? 'tbd-team' : ''}">${awayName}</div>
       </div>
     `;
-    card.onclick = () => openScheduledMatchModal(sched);
+    card.onclick = () => openScheduledMatchModal({ ...slot, homeName, awayName });
   }
   return card;
 }
@@ -925,9 +927,18 @@ function openPlayerModal(player, teamName) {
   document.getElementById("player-modal").style.display = "flex";
 }
 
+function openRulesModal() {
+  document.getElementById("rules-modal").style.display = "flex";
+}
+
+function closeRulesModal() {
+  document.getElementById("rules-modal").style.display = "none";
+}
+
 function closeMatchModal() { document.getElementById("match-modal").style.display = "none"; }
 function closePlayerModal() { document.getElementById("player-modal").style.display = "none"; }
 window.onclick = (e) => {
   if (e.target.id === "match-modal") closeMatchModal();
   if (e.target.id === "player-modal") closePlayerModal();
+  if (e.target.id === "rules-modal") closeRulesModal();
 };

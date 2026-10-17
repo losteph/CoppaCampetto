@@ -11,12 +11,19 @@
   <!-- BARRA SUPERIORE -->
   <header class="top-bar">
     <div class="top-bar-inner">
+
+      <button class="btn-info-corner" onclick="openRulesModal()" type="button">
+        ℹ️ Info
+      </button>
+
       <div class="brand">
         <span class="trophy-icon">🏀</span>
         <div>
           <h1 id="tournament-title">COPPA CAMPETTO</h1>
           <p id="tournament-subtitle">Portale Ufficiale Risultati, Classifiche & Statistiche</p>
         </div>
+      </div>
+
       </div>
 
       <!-- SELETTORE MODALITÀ TORNEO (ZERO LAG) -->
@@ -68,7 +75,8 @@
         <h3>Legenda Basket:</h3>
         <p class="legend-subtitle">Punteggi:</p>
         <ul class="legend-list">
-          <li>• <strong>V</strong> (Vittoria): +2 pt | <strong>P</strong> (Sconfitta): 0 pt</li>
+          <li>• <strong>V</strong> (Vittoria): +2 pt</li>
+          <li>• <strong>P</strong> (Sconfitta): 0 pt</li>
         </ul>
         <p class="legend-subtitle" style="margin-top: 8px;">Criteri Parità (Ex-Aequo):</p>
         <ol class="legend-list">
@@ -154,6 +162,80 @@
         <button class="modal-close" onclick="closePlayerModal()">✕</button>
       </div>
       <div id="player-card-content"></div>
+    </div>
+  </div>
+
+  <!-- MODALE REGOLAMENTO & INFO -->
+  <div id="rules-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <span class="modal-meta">COPPA CAMPETTO – REGOLAMENTO UFFICIALE 3v3</span>
+        <button class="modal-close" onclick="closeRulesModal()">✕</button>
+      </div>
+      <div class="modal-tab-body rules-content">
+        
+        <div class="rules-card warning">
+          <h4>0. NATURA DELL'INIZIATIVA E RESPONSABILITÀ</h4>
+          <p>• <strong>Coppa Campetto</strong> è un'attività ricreativa, libera, spontanea e gratuita tra privati cittadini, priva di scopo di lucro o carattere federale/ufficiale.</p>
+          <p>• La compilazione del modulo online di registrazione e scarico di responsabilità è <strong>condizione tassativa</strong> per poter scendere in campo.</p>
+          <p>• Le partite sono autogestite: ciascun partecipante dichiara sotto la propria responsabilità di essere maggiorenne, fisicamente idoneo alla pratica sportiva e di scendere in campo a proprio rischio e pericolo.</p>
+          <p>• Chi gestisce il calendario, il sito web o la raccolta statistica declina qualsivoglia responsabilità civile o penale per infortuni, lesioni fisiche, danni materiali a terzi/cose o smarrimenti verificatisi durante le partite o all'interno delle strutture utilizzate.</p>
+        </div>
+
+        <div class="rules-card">
+          <h4>1. SQUADRE E ROSTER</h4>
+          <p>• Da 3 a 4 giocatori per squadra (3 in campo + 1 cambio).</p>
+          <p>• Tutti devono aver compilato il modulo online prima di giocare.</p>
+          <p>• Maglie dello stesso colore o concordate tra le squadre (opzionale da valutare).</p>
+        </div>
+
+        <div class="rules-card">
+          <h4>2. DURATA E VITTORIA</h4>
+          <p>• Si gioca su metà campo con un canestro.</p>
+          <p>• <strong>Come si vince:</strong> Prima squadra che arriva a <strong>33 punti</strong> OPPURE chi è avanti allo scadere dei <strong>10 minuti continui</strong>.</p>
+          <p>• <strong>Palla a due:</strong> Sorteggio iniziale (monetina o sasso-carta-forbice).</p>
+          <p>• <strong>Overtime (parità al 10° minuto):</strong> Si va a oltranza senza tempo, vince chi si distacca di <strong>2 punti</strong>.</p>
+        </div>
+
+        <div class="rules-card">
+          <h4>3. PUNTEGGI CANESTRI</h4>
+          <p>• Dentro l'arco: <strong>2 punti</strong>.</p>
+          <p>• Fuori dall'arco: <strong>3 punti</strong>.</p>
+          <p>• Tiro libero: <strong>1 punto</strong>.</p>
+        </div>
+
+        <div class="rules-card">
+          <h4>4. REGOLE STREETBALL</h4>
+          <p>• <strong>Dopo canestro subito:</strong> Si riparte da sotto il ferro senza rimessa, portando palla fuori dall'arco (passaggio o palleggio).</p>
+          <p>• <strong>Palla recuperata / Rimbalzo difensivo:</strong> Bisogna uscire completamente oltre l'arco con entrambi i piedi prima di tirare.</p>
+          <p>• <strong>Palla contesa:</strong> Va sempre alla squadra in difesa.</p>
+          <p>• <strong>Cambi:</strong> Al volo a gioco fermo con tocco di mano.</p>
+          <p>• <strong>Check-ball:</strong> A inizio azione, fallo o palla fuori si effettua sempre lo scambio con la difesa in cima all'arco.</p>
+        </div>
+
+        <div class="rules-card">
+          <h4>5. FALLI E TIRI LIBERI</h4>
+          <p>• Conteggio falli di squadra gestito dal tavolo.</p>
+          <p>• <strong>Fino al 4° fallo:</strong> Fallo su tiro = tiri liberi (1 o 2 in base al tiro tentato). Fallo normale = check-ball fuori dall'arco.</p>
+          <p>• <strong>Dal 5° al 9° fallo:</strong> Ogni fallo assegna 2 tiri liberi.</p>
+          <p>• <strong>Dal 10° fallo in poi:</strong> 2 tiri liberi + possesso palla.</p>
+        </div>
+
+        <div class="rules-card">
+          <h4>6. ARBITRAGGIO E IL TAVOLO</h4>
+          <p>• Il fallo lo chiama l'attaccante che subisce il contatto.</p>
+          <p>• In caso di contestazione superiore a 10 secondi, interviene il <strong>Mediatore al tavolo</strong>. La decisione del tavolo è immediata e indiscutibile.</p>
+          <p>• Chi protesta o perde tempo subisce un <strong>fallo tecnico</strong> (1 tiro libero per gli avversari).</p>
+        </div>
+
+        <div class="rules-card">
+          <h4>7. PUNTI CLASSIFICA</h4>
+          <p>• <strong>Vittoria:</strong> 2 punti</p>
+          <p>• <strong>Sconfitta giocata:</strong> 0 punti</p>
+          <p>• <strong>Forfait / Mancata presenza:</strong> 0 punti (21-0 a tavolino)</p>
+        </div>
+
+      </div>
     </div>
   </div>
 

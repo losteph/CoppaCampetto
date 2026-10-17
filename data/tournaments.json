@@ -3,7 +3,7 @@
   "tournaments": [
     {
       "id": "girone_a",
-      "name": "GIRONE A (Campionato)",
+      "name": "GIRONE A",
       "type": "round_robin",
       "teamIds": ["t1", "t2", "t3", "t4"],
       "rounds": [
@@ -32,7 +32,7 @@
     },
     {
       "id": "girone_b",
-      "name": "GIRONE B (Campionato)",
+      "name": "GIRONE B",
       "type": "round_robin",
       "teamIds": ["t5", "t6", "t7", "t8"],
       "rounds": [
@@ -40,13 +40,13 @@
           "roundName": "1ª Giornata",
           "matches": [
             { "homeName": "Phoenix", "awayName": "Kings", "scheduledDate": "16/10/2026 18:00", "locationName": "Playground Steph - Campo B" },
-            { "homeName": "Black Panthers", "awayName": "Hawks", "scheduledDate": "16/10/2026 19:00", "locationName": "Playground Steph - Campo B", "mapsUrl": "https://maps.google.com/?" }
+            { "homeName": "Panthers", "awayName": "Hawks", "scheduledDate": "16/10/2026 19:00", "locationName": "Playground Steph - Campo B" }
           ]
         },
         {
           "roundName": "2ª Giornata",
           "matches": [
-            { "homeName": "Phoenix", "awayName": "Black Panthers", "scheduledDate": "17/10/2026 18:00", "locationName": "Playground Steph - Campo B" },
+            { "homeName": "Phoenix", "awayName": "Panthers", "scheduledDate": "17/10/2026 18:00", "locationName": "Playground Steph - Campo B" },
             { "homeName": "Kings", "awayName": "Hawks", "scheduledDate": "17/10/2026 19:00", "locationName": "Playground Steph - Campo B" }
           ]
         },
@@ -54,14 +54,14 @@
           "roundName": "3ª Giornata",
           "matches": [
             { "homeName": "Hawks", "awayName": "Phoenix", "scheduledDate": "18/10/2026 18:00", "locationName": "Playground Steph - Campo B" },
-            { "homeName": "Kings", "awayName": "Black Panthers", "scheduledDate": "18/10/2026 19:00", "locationName": "Playground Steph - Campo B" }
+            { "homeName": "Kings", "awayName": "Panthers", "scheduledDate": "18/10/2026 19:00", "locationName": "Playground Steph - Campo B" }
           ]
         }
       ]
     },
     {
       "id": "playoff",
-      "name": "FASE FINALE PLAYOFF",
+      "name": "PLAYOFF",
       "type": "knockout",
       "stages": [
         {
@@ -80,7 +80,7 @@
           ]
         },
         {
-          "stageName": "Finalissima 1° Posto",
+          "stageName": "Finalissima 1°/2° Posto",
           "isFinal": true,
           "matches": [
             { "matchCode": "FIN", "label": "Finalissima", "homeFromWinner": "SF1", "awayFromWinner": "SF2", "scheduledDate": "20/10/2026 19:30", "locationName": "Centrale" }
