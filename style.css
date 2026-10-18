@@ -835,3 +835,27 @@ body {
   background: #111827;
   border-color: #F97316;
 }
+
+/* DIVISORE PANCHINA NEL TABELLINO */
+.bench-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0 6px 0;
+  color: var(--text-muted);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.bench-divider::before,
+.bench-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.bench-divider span {
+  padding: 0 8px;
+}

@@ -846,7 +846,16 @@ function renderMatchPagelle(m) {
         </div>
     `;
 
-    (roster || []).forEach(p => {
+    let benchDividerAdded = false;
+    const sortedRoster = [...(roster || [])].sort((a, b) => (b.inField !== false ? 1 : 0) - (a.inField !== false ? 1 : 0));
+
+    sortedRoster.forEach((p, idx) => {
+      // Se inField è false, oppure se siamo in una partita con più di 3 giocatori e siamo oltre il 3° (indice >= 3)
+      const isBench = p.inField === false || (sortedRoster.length > 3 && idx >= 3 && sortedRoster.every(x => x.inField !== false));
+      if (isBench && !benchDividerAdded) {
+        html += `<div class="bench-divider"><span>Panchina</span></div>`;
+        benchDividerAdded = true;
+      }
       const v = ratings[String(p.dbId)] ?? "SV";
       const isMvp = v !== "SV" && String(p.dbId) === String(mvpId);
       let bColor = isMvp ? "#0044FF" : (v === "SV" ? "#334155" : (v >= 6.8 ? "#0A7227" : (v >= 5.8 ? "#D97706" : "#D50000")));
