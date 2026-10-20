@@ -786,7 +786,7 @@ function renderMatchCronaca(m) {
   container.innerHTML = "";
 
   const salienti = ["SCORE_1PT", "SCORE_2PT", "SCORE_3PT", "FOUL", "SUB"];
-  const events = (m.events || []).filter(e => salienti.includes(e.type)).reverse();
+  const events = (m.events || []).filter(e => salienti.includes(e.type));
 
   if (events.length === 0) {
     container.innerHTML = `<p style="color:#94A3B8; text-align:center; padding:20px;">Nessuna azione saliente registrata.</p>`;
